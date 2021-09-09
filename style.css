@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(185, 41%, 84%);
+    font-family: 'Space Mono';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.calculator {
+    background: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+}
+
+label {
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+}
+
+input, button, .result {
+    font-size: 24px;
+}
