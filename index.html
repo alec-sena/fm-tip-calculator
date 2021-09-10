@@ -31,38 +31,43 @@
   <div class="wrapper">
     <div class="calculator">
       <div class="calculator__container">
-        <label for="bill">Bill</label>
-        <span><img src="images/icon-dollar.svg"><input class="bill" type="number" step="0.01"
-            placeholder="0"></input></span>
-        <label>Select Tip %</label>
+        <div class="calculator__sub-container">
+          <label for="bill">Bill</label>
+          <input id="bill" type="number" step="0.01"placeholder="0.00"></input>
+        </div>
+        <label id="select-tip">Select Tip %</label>
         <div class="calculator__buttons">
           <button>5%</button>
           <button>10%</button>
           <button>15%</button>
           <button>25%</button>
           <button>50%</button>
-          <input type="number" placeholder="Custom"></input>
+          <input id="custom-percent" type="number" placeholder="Custom"></input>
         </div>
-        <label>Number of People</label>
-        <span><img src="images/icon-person.svg"><input number" step="1" placeholder="0"></input></span>
+        <div class="calculator__sub-container">
+          <label>Number of People</label>
+          <input id="people" number" step="1" placeholder="0"></input>
+        </div>
       </div>
-      <div class="calculator__container">
-        <div class="text-container">
-          <div class="text-subcontainer">
+      <div class="calculator__container calculator__results">
+        <div class="calculator__results--wrapper">
+        <div id="top-text-container" class="text-container">
+          <div  class="text-subcontainer">
             <p>Tip Amount</p>
-            <p>/ person</p>
+            <p class="subtext">/ person</p>
           </div>
           <p class="result">$0.00</p>
         </div>
         <div class="text-container">
           <div class="text-subcontainer">
             <p>Total</p>
-            <p>/ person</p>
+            <p class="subtext">/ person</p>
           </div>
           <p class="result">$0.00</p>
         </div>
-        <button>Reset</button>
+        <button id="reset">Reset</button>
       </div>
+    </div>
     </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
