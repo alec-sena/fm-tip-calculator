@@ -29,43 +29,44 @@
 
 <body>
   <div class="wrapper">
+    <img id="logo" src="images/logo.svg">
     <div class="calculator">
       <div class="calculator__container">
         <div class="calculator__sub-container">
           <label for="bill">Bill</label>
-          <input id="bill" type="number" step="0.01"placeholder="0.00"></input>
+          <input id="bill" type="number" step="0.01" placeholder="0.00" min="0.00"></input>
         </div>
         <label id="select-tip">Select Tip %</label>
         <div class="calculator__buttons">
-          <button>5%</button>
-          <button>10%</button>
-          <button>15%</button>
-          <button>25%</button>
-          <button>50%</button>
+          <button id="five-percent">5%</button>
+          <button id="ten-percent">10%</button>
+          <button id="fifteen-percent">15%</button>
+          <button id="twenty-five-percent">25%</button>
+          <button id="fifty-percent">50%</button>
           <input id="custom-percent" type="number" placeholder="Custom"></input>
         </div>
         <div class="calculator__sub-container">
-          <label>Number of People</label>
-          <input id="people" number" step="1" placeholder="0"></input>
+          <span class="sub-container__span"><label>Number of People</label><span id="people-error" class="hidden">Can't be zero.</span></span>
+          <input id="people" number" step="1" placeholder="1" min="1"></input>
         </div>
       </div>
       <div class="calculator__container calculator__results">
         <div class="calculator__results--wrapper">
-        <div id="top-text-container" class="text-container">
-          <div  class="text-subcontainer">
-            <p>Tip Amount</p>
-            <p class="subtext">/ person</p>
+          <div id="top-text-container" class="text-container">
+            <div  class="text-subcontainer">
+              <p>Tip Amount</p>
+              <p class="subtext">/ person</p>
+            </div>
+            <p id="tip-per-person" class="result">$0.00</p>
           </div>
-          <p class="result">$0.00</p>
-        </div>
-        <div class="text-container">
-          <div class="text-subcontainer">
-            <p>Total</p>
-            <p class="subtext">/ person</p>
+          <div class="text-container">
+            <div class="text-subcontainer">
+              <p>Total</p>
+              <p class="subtext">/ person</p>
+            </div>
+            <p id="total-per-person" class="result">$0.00</p>
           </div>
-          <p class="result">$0.00</p>
-        </div>
-        <button id="reset">Reset</button>
+          <button id="reset">Reset</button>
       </div>
     </div>
   </div>
@@ -74,6 +75,7 @@
       Coded by <a href="#">Alec Sena</a>.
     </div> -->
   </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
