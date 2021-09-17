@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   min-width: 375px;
+  width: 100vw;
 }
 
 .wrapper {
@@ -25,12 +26,6 @@ body {
   transform: translate(-50%, 0);
 }
 
-@media screen and (min-width: 1440px) {
-  #logo {
-    top: 7.5%;
-  }
-}
-
 .calculator {
   background: hsl(0, 0%, 100%);
   border-radius: 1rem;
@@ -41,28 +36,6 @@ body {
   width: 80%;
   height: 100%;
   margin: 0 auto;
-}
-
-@media screen and (min-width: 1440px) {
-  .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .calculator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
-    width: 60%;
-    height: 100%;
-    padding: 1rem;
-  }
-  .calculator__container {
-    width: 50%;
-    height: 100%;
-    margin: 1rem;
-  }
 }
 
 label {
@@ -150,13 +123,6 @@ button,
   margin-top: 1rem;
 }
 
-@media screen and (min-width: 1440px) {
-  .calculator__buttons {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-
 .calculator__buttons button {
   font-family: "Space Mono";
   font-weight: 700;
@@ -190,17 +156,6 @@ button,
 
 .calculator__results--wrapper {
   width: 85%;
-}
-
-@media screen and (min-width: 1440px) {
-  .calculator__results {
-    width: 50%;
-    height: 100%;
-  }
-
-  .calculator__results--wrapper {
-    height: 25rem;
-  }
 }
 
 .text-container {
@@ -253,6 +208,44 @@ button,
 }
 
 @media screen and (min-width: 1440px) {
+  #logo {
+    top: 7.5%;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    width: 63%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .calculator__container {
+    width: 50%;
+    height: 100%;
+    margin: 1rem;
+  }
+
+  .calculator__buttons {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .calculator__results {
+    width: 50%;
+    height: 100%;
+  }
+
+  .calculator__results--wrapper {
+    height: 25rem;
+  }
+
   #reset {
     margin-top: 8rem;
   }
