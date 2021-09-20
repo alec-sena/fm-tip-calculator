@@ -222,19 +222,29 @@ button,
     justify-content: center;
     align-items: center;
     margin-top: 10%;
-    width: 63%;
-    height: 100%;
-    padding: 1rem;
+    width: 920px;
+    height: 47%;
+    padding: 0 0.7rem;
   }
   .calculator__container {
-    width: 50%;
+    width: 45%;
     height: 100%;
-    margin: 1rem;
+    /* margin: 0 1rem; */
   }
 
   .calculator__buttons {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    /* column-gap: 0.875rem; */
+  }
+
+  .calculator__buttons button,
+  #custom-percent {
+    width: 7.313rem;
+  }
+
+  #custom-percent {
+    font-size: 20px;
   }
 
   .calculator__results {
