@@ -2,22 +2,13 @@ let bill = 0.00;
 let people = 0;
 let tipFactor = 0.00;
 
-const calculateTip = () => {
-    let tip = bill * tipFactor
-    return tip.toFixed(2);
-}
-
 const calculateTipPerPerson = () => {
-    return calculateTip() / people;
-}
-
-const calculateTotal = () => {
-    let total = parseFloat(bill + calculateTip(bill, tipFactor));
-    return total.toFixed(2);
+    let tip = (bill * tipFactor)
+    return tip / people;
 }
 
 const calculateTotalPerPerson = () => {
-    return calculateTotal() / people;
+    return parseFloat((bill / people) + calculateTipPerPerson()).toFixed(2);
 }
 
 const tipPerPerson = document.getElementById("tip-per-person");
@@ -25,9 +16,9 @@ const totalPerPerson = document.getElementById("total-per-person");
 const peopleError = document.getElementById("people-error");
 
 const updateAll = () => {
-    let tipText = !isFinite(calculateTipPerPerson()) || isNaN(calculateTipPerPerson()) ? '0.00' : calculateTipPerPerson().toFixed(2);
-    let totalText = !isFinite(calculateTotalPerPerson()) || isNaN(calculateTotalPerPerson()) ? '0.00' : calculateTotalPerPerson().toFixed(2);
-    tipPerPerson.innerText = `$${tipText}`;
+    let tipText = !isFinite(calculateTipPerPerson()) || isNaN(calculateTipPerPerson()) ? '0.00' : calculateTipPerPerson();
+    let totalText = !isFinite(calculateTotalPerPerson()) || isNaN(calculateTotalPerPerson()) ? '0.00' : calculateTotalPerPerson();
+    tipPerPerson.innerText = `$${parseFloat(tipText).toFixed(2)}`;
     totalPerPerson.innerText = `$${totalText}`;
 }
 
